@@ -7,7 +7,9 @@ This project develops a method for tracking fluorescent neuronal nuclei in C. el
 - Utilizes graph neural networks for detecting and linking fluorescent objects.
 - Integrates features from segmentation for improved neuron identification.
 - Employs nonrigid registration to handle deformations and partial matches.
+  
 ## Getting Started
+Pelase use the NAS datasets at the folder '/2024/Hang/ZM9624'
 
 ### Dependencies
 
