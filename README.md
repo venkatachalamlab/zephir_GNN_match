@@ -1,29 +1,36 @@
 # zephir_GNN_match
 
 
-# Project Title
-
-A brief description of what this project does and who it's for.
+# Neuron Tracking in C. elegans
+This project develops a method for tracking fluorescent neuronal nuclei in C. elegans using a graph attention-based neural network and nonrigid registration algorithms. It aims to improve the efficiency of tracking neurons in freely behaving worms, enhancing the understanding of neural activity and behavior.
 
 ## Description
 
-Provide a more detailed explanation of the project. Discuss the purpose of the project and what problem it is solving. Include any relevant background information or context.
-
+## Key Features
+- Utilizes graph neural networks for detecting and linking fluorescent objects.
+- Integrates features from segmentation for improved neuron identification.
+- Employs nonrigid registration to handle deformations and partial matches.
 ## Getting Started
 
 ### Dependencies
 
 List any libraries, tools, or frameworks needed to run your project.
 
-- Example library 1
-- Example tool 2
-- Example framework 3
+- Pytorch
+- Tensorflow
+- Stardist
 
-### Installing
-
-Step-by-step instructions on how to get a development environment running.
+## Installation
+Clone this repository and install the required dependencies:
 
 ```bash
-git clone https://yourprojectlink.com
-cd your-project
-install dependencies
+git clone https://github.com/yourusername/neuron-tracking.git
+cd neuron-tracking
+pip install -r requirements.txt
+
+## Conatct
+Project Link: https://github.com/venkatachalamlab/zephir_GNN_match
+Paper Link: https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12857/128570H/Neuron-tracking-in-C-elegans-through-automated-anchor-neuron-localization/10.1117/12.3001982.full#_=_
+
+
+
