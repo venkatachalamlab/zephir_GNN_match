@@ -1,6 +1,3 @@
-# zephir_GNN_match
-
-
 # Neuron Tracking in C. elegans
 This project develops a method for tracking fluorescent neuronal nuclei in C. elegans using a graph attention-based neural network and nonrigid registration algorithms. It aims to improve the efficiency of tracking neurons in freely behaving worms, enhancing the understanding of neural activity and behavior.
 
