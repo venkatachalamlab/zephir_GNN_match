@@ -40,7 +40,7 @@ img_shape = [metadata['shape_y'],metadata['shape_x'],metadata['shape_z']] ## the
 nearby_search_num = [5,20] ## list of nearby neurons that is taken into consideration
 use_GNN = True
 file_name = "annotations.h5"
-t_initil_list = [444] ## the initail annotated frame
+t_initial_list = [444] ## the initail annotated frame
 
 
 
