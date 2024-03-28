@@ -42,8 +42,8 @@ def get_current_refe_frames(lines_with_test):
 
 def get_pair_data4(t1,t2,device,path_graph):
 
-    data1 = torch.load(path_graph+str(t1)+'.pt')
-    data2 = torch.load(path_graph+str(t2)+'.pt')
+    data1 = torch.load(os.path.join(path_graph,str(t1)+'.pt'))
+    data2 = torch.load(os.path.join(path_graph,str(t2)+'.pt'))
 
    
     return data1.to(device),data2.to(device)
@@ -219,7 +219,7 @@ def find_merged_index_graphdata(seg_path,t1,img_shape,annotation):
     annotation: the newest annotation from the zephir
     return: the merged neuron index of the graph data
     '''
-    h = h5py.File(seg_path + str(t1) +'.h5', 'r')
+    h = h5py.File(os.path.join(seg_path,str(t1) +'.h5'), 'r')
     seg = h['label'][:]
     h.close()
     rescale = np.array(img_shape)  - 1

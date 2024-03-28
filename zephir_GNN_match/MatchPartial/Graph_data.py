@@ -9,6 +9,7 @@ from .GNN_model import *
 # from Graph_data import *
 import pathlib
 import time
+import os
 import concurrent.futures
 
 
@@ -67,7 +68,7 @@ def get_data_generator(t_idx, ch, num_nearest,img_h5_path,seg_h5_path,annotation
     img_orig = img_original[0,ch]
 
 
-    f = h5py.File(seg_h5_path+str(t_idx)+'.h5', 'r')
+    f = h5py.File(os.path.join(seg_h5_path,str(t_idx)+'.h5'), 'r')
     seg = f['label'][:]
     f.close()
 

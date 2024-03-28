@@ -113,7 +113,7 @@ def get_mask_from_proj_pred(model_2D,img_zoom):
 
 
 def get_frame_segmentation(model,model_2D,t_idx, ch, zoom_factor,folder_path):
-    img_original,mask = get_volume_at_frame(folder_path+'data.h5',t_idx)
+    img_original,mask = get_volume_at_frame(os.path.join(folder_path,'data.h5'),t_idx)
     img_zoom = scipy.ndimage.zoom(img_original[0,ch],[1,zoom_factor,zoom_factor],order = 0)
     img_norm = normalize(img_zoom, 1,99.8)
     img_proj_pred = get_mask_from_proj_pred(model_2D,img_zoom)
@@ -123,7 +123,7 @@ def get_frame_segmentation(model,model_2D,t_idx, ch, zoom_factor,folder_path):
 
 
 def get_img_shape(folder_path):
-    hf = h5py.File(folder_path + 'data.h5', 'r')
+    hf = h5py.File(os.path.join(folder_path,'data.h5'), 'r')
     img_shape = hf['data'][:].shape
     hf.close()
     img_shape = np.array(img_shape)
@@ -200,7 +200,7 @@ def process_iteration(t_idx,  model, model_2D, ch, zoom_factor, load_folder, sav
     print(t_idx)
     label_z = get_frame_segmentation(model, model_2D, t_idx, ch, zoom_factor, load_folder)
     print(label_z.shape)
-    save_var_h5(save_folder + str(t_idx) + '.h5', [label_z], ['label'])
+    save_var_h5(os.path.join(save_folder, str(t_idx) + '.h5'), [label_z], ['label'])
     print("finish saving at "+str(t_idx))
     return t_idx  # Return t_idx to track progress
 
